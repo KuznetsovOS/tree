@@ -59,7 +59,7 @@ public class Node {
         }
         for (Node child : this.children) {
             child.removeChildren();
-            this.children.clear();
         }
+        this.children.clear();
     }
 }
