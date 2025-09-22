@@ -1,23 +1,40 @@
 package ru.ac.uniyar.kuznetsov;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Node {
-    public Node(String name) {
+    private int id;
+    private String name;
+    private final List<Node> children = new ArrayList<>();
+    private Node parent;
 
+    public Node(String name) {
+        this.name = name;
     }
 
     public String getName() {
-        return null;
+        return this.name;
+    }
+
+    public Node getParent() {
+        return this.parent;
+    }
+
+    public int getId() {
+        return this.id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public void addChild(Node child) {
-
+        this.children.add(child);
     }
 
-
     public List<Node> getChildren() {
-        return null;
+        return this.children;
     }
 
     public Node getChildByName(String name) {
@@ -37,20 +54,6 @@ public class Node {
     }
 
     public void removeChildren() {
-
+//        this.children.clear();
     }
-
-    public void setName(String name) {
-
-    }
-
-    public Node getParent() {
-        return null;
-    }
-
-    public int getId() {
-        return 0;
-    }
-
-
 }
