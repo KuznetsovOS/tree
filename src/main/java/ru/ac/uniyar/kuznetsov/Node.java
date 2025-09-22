@@ -54,6 +54,12 @@ public class Node {
     }
 
     public void removeChildren() {
-//        this.children.clear();
+        if (this.children.isEmpty()) {
+            return;
+        }
+        for (Node child : this.children) {
+            child.removeChildren();
+            this.children.clear();
+        }
     }
 }
